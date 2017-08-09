@@ -15,7 +15,8 @@ set exrc
 set t_Co=256
 set number
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=DarkGray
-colorscheme torte 
+colorscheme badwolf
+syntax on
 
 set noshowmode
 set laststatus=2
