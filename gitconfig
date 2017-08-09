@@ -5,4 +5,4 @@
 [alias]
     co = checkout
     st = status
-    gr = log --graph
+    gr = log --pretty=format:\"%C(bold)%Cred%h %Cgreen%ad%Creset %C(bold)%C(magenta)%an%Creset %C(bold)%s%Creset\" --date iso
