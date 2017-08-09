@@ -1,0 +1,8 @@
+[user]
+    name = "Algys Ievlev"
+    email = algys.ievlev@gmail.com
+
+[alias]
+    co = checkout
+    st = status
+    gr = log --graph
