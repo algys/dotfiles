@@ -26,3 +26,8 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4 
 set expandtab
+
+map <S-z> <C-w><C-w>
+map <C-\> :Tagbar<CR>
+map <F8> :execute '!ctags -R' <CR>
+set tags=tags 
