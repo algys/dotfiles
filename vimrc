@@ -1,33 +1,41 @@
-let g:airline#extensions#tagbar#enabled = 0
+set expandtab
+set softtabstop=4
+set shiftwidth=4
+set cino=g0:0N-s
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 
-execute pathogen#infect()
-call pathogen#helptags()
-
-autocmd vimenter * NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-map <Tab> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+set rtp+=~/.fzf
 
 set exrc
 set t_Co=256
 set number
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=DarkGray
 colorscheme badwolf
-syntax on
 
+set directory=$HOME/.vim/tmp/
+
+set nowrap
 set noshowmode
 set laststatus=2
-let g:bufferline_echo = 0
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4 
-set expandtab
+map <F8> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+map <C-\> :%s/\s\+$//e<CR>
+
+set listchars=trail:·,eol:¬,nbsp:_
+set list
 
 map <S-z> <C-w><C-w>
-map <C-\> :Tagbar<CR>
-map <F8> :execute '!ctags -R' <CR>
-set tags=tags 
+
+execute pathogen#infect()
+call pathogen#helptags()
+
+map <TAB> :NERDTreeToggle<CR>
+map <S-TAB> :Tagbar<CR>
+map <C-g> :Gblame<CR>
+map <S-f> :Files<CR>
+map <S-g> :GFiles<CR>
+
