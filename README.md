@@ -10,7 +10,7 @@ sudo apt install tmux vim
 ```
 arch linux:
 ```bash
-sudo apt install tmux vim
+sudo pacman -S tmux vim
 ```
 
 ```bash
