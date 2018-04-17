@@ -4,10 +4,10 @@ curl -sL https://raw.githubusercontent.com/egalpin/apt-vim/master/install.sh | s
 
 source ~/.bashrc || source ~/.bash_profile
 
-$HOME/.vimpkg/bin/apt-vim install -y https://github.com/tpope/vim-fugitive.git
-$HOME/.vimpkg/bin/apt-vim install -y https://github.com/scrooloose/nerdtree.git
-$HOME/.vimpkg/bin/apt-vim install -y https://github.com/vim-airline/vim-airline
-$HOME/.vimpkg/bin/apt-vim install -y https://github.com/junegunn/fzf.vim.git
+apt-vim install -y https://github.com/tpope/vim-fugitive.git
+apt-vim install -y https://github.com/scrooloose/nerdtree.git
+apt-vim install -y https://github.com/vim-airline/vim-airline.git
+apt-vim install -y https://github.com/junegunn/fzf.vim.git
 
 cp vimrc $HOME/.vimrc
 cp gitconfig $HOME/.gitconfig
