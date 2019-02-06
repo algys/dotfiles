@@ -2,6 +2,9 @@
     name = "Algys Ievlev"
     email = algys.ievlev@gmail.com
 
+[core]
+    editor = "vim"
+
 [alias]
     co = checkout
     st = status

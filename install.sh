@@ -2,7 +2,7 @@
 
 curl -sL https://raw.githubusercontent.com/egalpin/apt-vim/master/install.sh | sh
 
-source ~/.bashrc || source ~/.bash_profile
+PATH=$PATH:~/.vimpkg/bin/
 
 apt-vim install -y https://github.com/tpope/vim-fugitive.git
 apt-vim install -y https://github.com/scrooloose/nerdtree.git
