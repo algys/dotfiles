@@ -18,9 +18,11 @@ colorscheme badwolf
 
 set directory=$HOME/.vim/tmp/
 
+set hlsearch
 set nowrap
 set noshowmode
 set laststatus=2
+set term=xterm-256color
 
 map <F8> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 map <C-\> :%s/\s\+$//e<CR>
